@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.eakay.ebus.repository.db.mybatis.master.xa2.OrderBDOMapper">
+  <resultMap id="BaseResultMap" type="cn.eakay.ebus.client.dataobject.xa2.OrderBDO">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="customerId" jdbcType="INTEGER" property="customerid" />
+    <result column="carId" jdbcType="INTEGER" property="carid" />
+    <result column="merchantId" jdbcType="INTEGER" property="merchantid" />
+    <result column="priceTypeId" jdbcType="INTEGER" property="pricetypeid" />
+    <result column="priceTypeTableName" jdbcType="VARCHAR" property="pricetypetablename" />
+    <result column="orderStatus" jdbcType="VARCHAR" property="orderstatus" />
+    <result column="subOrderStatus" jdbcType="VARCHAR" property="suborderstatus" />
+    <result column="createdTime" jdbcType="TIMESTAMP" property="createdtime" />
+    <result column="kmsForGet" jdbcType="REAL" property="kmsforget" />
+    <result column="imgForGet" jdbcType="VARCHAR" property="imgforget" />
+    <result column="socForGet" jdbcType="DECIMAL" property="socforget" />
+    <result column="kmsForReturn" jdbcType="REAL" property="kmsforreturn" />
+    <result column="imgForReturn" jdbcType="VARCHAR" property="imgforreturn" />
+    <result column="useCost" jdbcType="DECIMAL" property="usecost" />
+    <result column="totalCost" jdbcType="DECIMAL" property="totalcost" />
+    <result column="backCost" jdbcType="DECIMAL" property="backcost" />
+    <result column="backDescribe" jdbcType="VARCHAR" property="backdescribe" />
+    <result column="socForReturn" jdbcType="DECIMAL" property="socforreturn" />
+    <result column="schemingGetTime" jdbcType="TIMESTAMP" property="scheminggettime" />
+    <result column="schemingReturnTime" jdbcType="TIMESTAMP" property="schemingreturntime" />
+    <result column="realityGetTime" jdbcType="TIMESTAMP" property="realitygettime" />
+    <result column="realityReturnTime" jdbcType="TIMESTAMP" property="realityreturntime" />
+    <result column="schemingGetSiteId" jdbcType="INTEGER" property="scheminggetsiteid" />
+    <result column="schemingReturnSiteId" jdbcType="INTEGER" property="schemingreturnsiteid" />
+    <result column="relityGetSiteId" jdbcType="INTEGER" property="relitygetsiteid" />
+    <result column="relityReturnSiteId" jdbcType="INTEGER" property="relityreturnsiteid" />
+    <result column="earlyGetCost" jdbcType="DECIMAL" property="earlygetcost" />
+    <result column="earlyReturnCost" jdbcType="DECIMAL" property="earlyreturncost" />
+    <result column="laterGetCost" jdbcType="DECIMAL" property="latergetcost" />
+    <result column="laterReturnCost" jdbcType="DECIMAL" property="laterreturncost" />
+    <result column="otherCost" jdbcType="DECIMAL" property="othercost" />
+    <result column="insuranceCost" jdbcType="DECIMAL" property="insurancecost" />
+    <result column="priceTypeName" jdbcType="VARCHAR" property="pricetypename" />
+    <result column="getCarStatus" jdbcType="VARCHAR" property="getcarstatus" />
+    <result column="returnCarStatus" jdbcType="VARCHAR" property="returncarstatus" />
+    <result column="fetchCarConfirm" jdbcType="VARCHAR" property="fetchcarconfirm" />
+    <result column="perKms" jdbcType="REAL" property="perkms" />
+    <result column="perKmsCost" jdbcType="DECIMAL" property="perkmscost" />
+    <result column="menForGet" jdbcType="VARCHAR" property="menforget" />
+    <result column="menForReturn" jdbcType="VARCHAR" property="menforreturn" />
+    <result column="menForCharge" jdbcType="VARCHAR" property="menforcharge" />
+    <result column="returnCarConfirm" jdbcType="VARCHAR" property="returncarconfirm" />
+    <result column="oldId" jdbcType="INTEGER" property="oldid" />
+    <result column="otherDescribe" jdbcType="VARCHAR" property="otherdescribe" />
+    <result column="moneyOfassure" jdbcType="DECIMAL" property="moneyofassure" />
+    <result column="merchantAccountId" jdbcType="INTEGER" property="merchantaccountid" />
+    <result column="customerTable" jdbcType="VARCHAR" property="customertable" />
+    <result column="orderType" jdbcType="INTEGER" property="ordertype" />
+    <result column="orderDescribe" jdbcType="VARCHAR" property="orderdescribe" />
+    <result column="surplusKmsForGet" jdbcType="REAL" property="surpluskmsforget" />
+    <result column="surplusKmsForReturn" jdbcType="REAL" property="surpluskmsforreturn" />
+    <result column="ticket" jdbcType="VARCHAR" property="ticket" />
+    <result column="payment" jdbcType="VARCHAR" property="payment" />
+    <result column="checkUser" jdbcType="VARCHAR" property="checkuser" />
+    <result column="checkDescribe" jdbcType="VARCHAR" property="checkdescribe" />
+    <result column="maintenanceCost" jdbcType="DECIMAL" property="maintenancecost" />
+    <result column="couponId" jdbcType="INTEGER" property="couponid" />
+    <result column="couponCost" jdbcType="DECIMAL" property="couponcost" />
+    <result column="checkReturnTime" jdbcType="TIMESTAMP" property="checkreturntime" />
+    <result column="checkUserId" jdbcType="INTEGER" property="checkuserid" />
+    <result column="isFp" jdbcType="INTEGER" property="isfp" />
+    <result column="orderNO" jdbcType="VARCHAR" property="orderno" />
+    <result column="cs" jdbcType="INTEGER" property="cs" />
+    <result column="UnpayMsg" jdbcType="INTEGER" property="unpaymsg" />
+    <result column="isUseCoupon" jdbcType="TINYINT" property="isusecoupon" />
+    <result column="eakayMoney" jdbcType="DECIMAL" property="eakaymoney" />
+    <result column="payMoney" jdbcType="DECIMAL" property="paymoney" />
+    <result column="insurance" jdbcType="INTEGER" property="insurance" />
+    <result column="paymentTime" jdbcType="TIMESTAMP" property="paymenttime" />
+    <result column="highwayCost" jdbcType="DECIMAL" property="highwaycost" />
+    <result column="suranceCost" jdbcType="DECIMAL" property="surancecost" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+    <result column="companyId" jdbcType="BIGINT" property="companyid" />
+    <result column="penalty_cost" jdbcType="DECIMAL" property="penaltyCost" />
+    <result column="calFlag" jdbcType="INTEGER" property="calflag" />
+    <result column="orderFlag" jdbcType="TINYINT" property="orderflag" />
+    <result column="isFreeOrder" jdbcType="INTEGER" property="isfreeorder" />
+    <result column="isSelfReturnCar" jdbcType="TINYINT" property="isselfreturncar" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="source" jdbcType="TINYINT" property="source" />
+    <result column="workOperateStatus" jdbcType="INTEGER" property="workoperatestatus" />
+    <result column="customerServerComments" jdbcType="VARCHAR" property="customerservercomments" />
+    <result column="autoSelfOrderTagContent" jdbcType="VARCHAR" property="autoselfordertagcontent" />
+    <result column="workOrderSetId" jdbcType="INTEGER" property="workordersetid" />
+    <result column="merchantUserId" jdbcType="INTEGER" property="merchantuserid" />
+    <result column="scsUserId" jdbcType="INTEGER" property="scsuserid" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!-- TKmybatis配置 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="cn.eakay.ebus.repository.util.BaseMapper"/>
+        </plugin>
+
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+
+        </commentGenerator>
+        <!-- 数据库链接URL、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://172.168.83.7:3306/slave3?tinyInt1isBit=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="eakay" password="c1pnuRnaaD9u"/>
+
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="cn.eakay.ebus.client.dataobject.xa3" targetProject="src/main/java" />
+        <!-- 生成的映射文件包名和位置 -->
+        <sqlMapGenerator targetPackage="ebus.repository.sqlmap.master.xa3" targetProject="src/main/resources" />
+        <!-- 生成service的包名和位置 -->
+        <javaClientGenerator targetPackage="cn.eakay.ebus.repository.db.mybatis.master.xa3" targetProject="src/main/java" type="XMLMAPPER" />
+
+        <!-- 要生成的那些表 -->
+        <!--        <table tableName="bus_city" domainObjectName="BusCity" >
+                    <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+                </table>-->
+
+        <table tableName="t_order_c" domainObjectName="OrderCDO" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+
+
+
+    </context>
+
+</generatorConfiguration>

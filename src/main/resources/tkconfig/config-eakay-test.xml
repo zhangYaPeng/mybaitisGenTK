@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!-- TKmybatis配置 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="org.zyp.util.BaseMapper"/>
+        </plugin>
+
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+
+        </commentGenerator>
+        <!-- 数据库链接URL、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://preekdb.master.mysql.eakay.cn:3306/test?tinyInt1isBit=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="u_happy_bus" password="happy_busBwVNdeHelbQalMbaPl"/>
+
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="org.zyp.domain.test" targetProject="src/main/java" />
+        <!-- 生成的映射文件包名和位置 -->
+        <sqlMapGenerator targetPackage="mapper.test" targetProject="src/main/resources" />
+        <!-- 生成service的包名和位置 -->
+        <javaClientGenerator targetPackage="org.zyp.dao.test" targetProject="src/main/java" type="XMLMAPPER" />
+
+        <!-- 要生成的那些表 -->
+<!--        <table tableName="bus_city" domainObjectName="BusCity" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <table tableName="asset_provider" domainObjectName="AssetProvider" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+        <table tableName="order_policy_record" domainObjectName="OrderPolicyRecord" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+
+
+
+    </context>
+
+</generatorConfiguration>
